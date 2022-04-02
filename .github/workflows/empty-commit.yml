@@ -11,5 +11,7 @@ jobs:
     steps:
       - uses: actions/setup-node@v3
       - run: |
-          npm install -g make-empty-github-commit
-          $(npm bin -g)/empty-commit --repo NullableSafety/gitsync_repo --message "Empty commit for GHA" --branch empty
+          git clone https://github.com/bahmutov/make-empty-github-commit
+          cd make-empty-github-commit
+          npm install --dev
+          node bin/empty.js --repo NullableSafety/gitsync_repo --message "Empty commit for GHA" --branch empty
