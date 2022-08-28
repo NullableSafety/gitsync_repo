@@ -3,7 +3,7 @@ name: empty-commit
 on: 
   push:
   schedule:
-    - cron: '* * 1 * *'
+    - cron: '0 0 1 * *'
   workflow_dispatch:
 jobs:
   empty-commit:
